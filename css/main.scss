@@ -14,9 +14,9 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color:       #fff;
+$background-color: #000;
+$brand-color:      rgb(0,255,255);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -28,6 +28,13 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+// Colors
+//
+$blue: rgb(0,255,255);
+$yellow: rgb(255,255,0);
+$green: rgb(128,255,0);
+$red: rgb(255,0,128);
+$purple: rgb(171,0,209);
 
 
 // Use media queries like this:
@@ -49,5 +56,5 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "fonts"
 ;

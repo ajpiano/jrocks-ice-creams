@@ -17,3 +17,8 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+gems:
+- jekyll-compass
+destination:  ./_built_site
+

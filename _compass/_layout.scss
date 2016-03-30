@@ -4,8 +4,16 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    color: $white;
+    background: url('/images/jrocks-bg-sprinkles.svg') $blue;
     padding: $spacing-unit 0;
+
+    h2, a {
+      color: $white;
+    }
+
 }
 
 .footer-heading {
@@ -21,7 +29,6 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $text-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }

@@ -84,6 +84,8 @@ li {
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
     font-family: 'vanillaregular';
+    font-size: $header-font-size;
+    color: $blue;
 }
 
 
@@ -201,7 +203,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $white;
         }
     }
 }

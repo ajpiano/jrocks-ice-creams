@@ -52,7 +52,11 @@
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
+        color: black;
 
+        .page-link {
+          color: $black;
+        }
         .menu-icon {
             display: block;
             float: right;

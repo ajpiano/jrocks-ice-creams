@@ -1,0 +1,46 @@
+# Get the box up and running. These tasks run before the box is configured
+# or the project is cloned or built. All system dependencies should be
+# installed here.
+
+- name: add keys to apt
+  apt_key: url={{item}} state=present
+  with_items: apt_keys
+
+- name: add ppas to apt
+  apt_repository: repo="{{item}}" state=present update_cache=yes
+  with_items: apt_ppas
+
+- name: install apt packages
+  apt: name={{item}} state=latest update_cache=yes
+  with_items: apt_packages
+
+- name: update npm to latest
+  npm: name=npm state=latest global=yes
+
+#- name: install global npm modules
+#  npm:
+#    name={{item.name}}
+#    state=present
+#    version={{ item.version | default(omit) }}
+#    global=yes
+#  with_items: npm_global_modules
+
+- name: add symlinks for ruby 2.0
+  file: src={{item.src}} dest={{item.dest}} state=link
+  with_items:
+    - src: /usr/bin/ruby2.0
+      dest: /usr/local/bin/ruby
+    - src: /usr/bin/gem2.0
+      dest: /usr/local/bin/gem
+
+#- name: install bundler
+#  shell: gem install bundler
+
+- name: Jekyll is installed
+  gem: name=jekyll version=2.5.3 user_install=no
+
+- name: jekyll-compass is installed
+  gem: name=jekyll-compass version=2.0.1 user_install=no
+
+- name: Compass is installed
+  gem: name=jekyll version=1.0.3 user_install=no

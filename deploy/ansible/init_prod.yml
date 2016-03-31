@@ -1,0 +1,4 @@
+# This is for production provisioning
+
+- include: provision.yml
+- include: configure.yml

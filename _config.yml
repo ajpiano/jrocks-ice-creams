@@ -7,12 +7,14 @@
 
 # Site settings
 title: J-Rock's Excellent Ice Creams
-email: your-email@domain.com
+email: jrocksicecreams@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   J-Rock's Excellent Ice Creams, delicious ice cream born and raised in Brooklyn.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://jrocksicecreams.com" # the base hostname & protocol for your site
 twitter_username: jrockicecreams
+facebook_username: JRocks-Excellent-Ice-Creams
+instagram_username: jrockicecreams
 
 # Build settings
 markdown: kramdown

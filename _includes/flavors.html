@@ -1,19 +1,11 @@
 <section id="flavors">
   <h2>Flavors</h2>
-
   <ul>
-    <li>Thai Iced Tea</li>
-    <li>Lemon Humdinger: lemon curd ice cream with graham cracker pie crust</li>
-    <li>Laura's Stolen Cookies -- vanilla ice cream with crushed cookies and cookie butter swirl</li>
-    <li>Minty Chocolate</li>
-    <li>Straight Up Vanilla</li>
-    <li>A Night in Tunisia: coffee-cinnamon ice cream with candied pine nuts and dates</li>
-    <li>Gingervitis: fresh and crystallized ginger, cayenne pepper</li>
-    <li>Tall Dark & Belgian: dark chocolate, belgian milk chocolate ice cream</li>
-    <li>Slick Ric: honey ricotta ice cream with fig preserves</li>
-    <li>Pineapple Express: carmelized pineapple, toasted coconut flakes</li>
-    <li>Peanut Butter & Jelly</li>
-    <li>Rainbow Cookie</li>
+    {% for flavor in site.data.flavors %}
+      <li>
+        {{ flavor.name }}{% if flavor.description %}: {{flavor.description}}{% endif %}
+      </li>
+    {% endfor %}
     <li>And more!</li>
   </ul>
 </section>

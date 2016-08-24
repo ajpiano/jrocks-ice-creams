@@ -1,0 +1,15 @@
+#photos ul li {
+  display: inline-block;
+  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+  width:         calc(25% - (#{$spacing-unit} / 2));
+  margin-bottom: -webkit-calc(#{$spacing-unit} / 2);
+  margin-bottom:         calc(#{$spacing-unit} / 2);
+}
+
+@include media-query($on-palm) {
+    #photos ul li {
+      display: block;
+      width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+      width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}

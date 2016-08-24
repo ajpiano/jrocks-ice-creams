@@ -5,4 +5,4 @@ http_path: "/_built_site"
 css_dir: css
 sass_dir: _compass
 images_dir: images
-javascripts_dir: javascripts
+javascripts_dir: js

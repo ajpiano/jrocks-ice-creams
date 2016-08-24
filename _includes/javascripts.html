@@ -1,0 +1,17 @@
+<!-- add GA script -->
+<script src="/js/instafeed.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '3149978260',
+        clientId: 'c774b1ee9d3b4377a6272eff81de4fb7',
+        accessToken: '3149978260.c774b1e.e5901c249b6a468980b0e615f8cda5f3',
+        limit: 12,
+        resolution: 'standard_resolution',
+        {% raw %}
+        template: '<li><a href="{{link}}"><img src="{{image}}" /></a></li>'
+        {% endraw %}
+    });
+    feed.run();
+    console.log(feed);
+</script>

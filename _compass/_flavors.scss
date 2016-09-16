@@ -1,0 +1,59 @@
+#flavors ul li {
+  display: inline-block;
+  width: -webkit-calc(33% - (#{$spacing-unit} / 2));
+  width:         calc(33% - (#{$spacing-unit} / 2));
+  text-align: center;
+  vertical-align: middle;
+  h4 {
+    font-size:100%;
+    text-transform: uppercase;
+  }
+}
+
+@include media-query($on-palm) {
+    #flavors ul li {
+      display: block;
+      width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+      width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+$flavors: (
+  'thai-iced-tea': (
+    bg: #f37840,
+    fg: #fff
+  ),
+  'lemon-humdinger': (
+    bg: #f8ed3c,
+    fg: #471710
+  ),
+  'lauras-stolen-cookies': (
+    bg: #ed2124,
+    fg: #fff
+  ),
+  'straight-up-vanilla': (
+    bg: $blue,
+    fg: #fff
+  ),
+  'minty-chocolate': (
+    bg: #93e09c,
+    fg: #000
+  ),
+  'slick-ric': (
+    bg: #3e2571,
+    fg: #ffd34d
+  ),
+  'a-night-in-tunisia': (
+    bg: #eed7b4,
+    fg: #93371f
+  )
+);
+
+@each $flavor, $colors in $flavors {
+ #flavors .flavor-container.flavor-#{$flavor} {
+   background-color: map-get($colors, 'bg');
+   h4, p {
+     color: map-get($colors, 'fg');
+   }
+ }
+}

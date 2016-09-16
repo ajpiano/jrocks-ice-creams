@@ -1,2 +1,0 @@
-openssl req -new -sha256 -key ~/cssconf.com.ssl/cssconf.com.key -out ~/cssconf.com.ssl/cssconf.com.csr
-
